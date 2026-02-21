@@ -1,0 +1,38 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+  --primary: #1f2d3d;
+  --accent: #c9a66b;
+  --background: #f7f2ec;
+  --text-light: #555;
+}
+
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+    180deg,
+    #fdfaf6 0%,
+    #f9f6f2 40%,
+    #ffffff 100%
+  );
+  color: #222;
+}
+
+/* Remove Vite default container restriction */
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: smoother text rendering */
+html {
+  scroll-behavior: smooth;
+}
