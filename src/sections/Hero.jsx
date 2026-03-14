@@ -1,41 +1,48 @@
 import heroImage from "../assets/hero.jpg";
+import { motion } from "framer-motion";
 
 function Hero() {
     return (
-        <section
-            className="hero"
-            style={{
-                backgroundImage: `url(${heroImage})`,
-            }}
-        >
-            <div className="hero-content">
-                <h1>
-                    Your space for healing,
-                    <br />
-                    strength & balance
-                </h1>
+        <section className="hero" id="home">
+            <div className="hero-overlay"></div>
+
+            <img src={heroImage} alt="Aurora Wellness" className="hero-bg" />
+
+            <motion.div
+                className="hero-content"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+            >
+
+                <div className="free-demo-badge">
+                    🎉 First Demo Session FREE
+                </div>
+
+                <h1>Find Your Balance with Aurora Wellness</h1>
 
                 <p>
-                    Calm guidance. Gentle wellness.
-                    <br />
-                    Real transformation at your pace.
+                    Personalized yoga programs for women, kids, seniors and wellness seekers.
                 </p>
 
                 <div className="hero-buttons">
-                    <button className="primary-btn">
-                        Book a Session
-                    </button>
-
                     <a
-                        href="https://wa.me/917871666047?text=Hi%20I%20am%20interested%20in%20Aurora%20Wellness%20programs"
+                        href="https://wa.me/919566195284?text=Hi%20I%20would%20like%20to%20book%20a%20free%20demo%20session"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="outline-btn"
+                        className="primary-btn"
                     >
-                        Chat on WhatsApp
+                        <button className="primary-btn">Book Free Demo</button>
                     </a>
+                    <button
+                        className="secondary-btn"
+                        onClick={() =>
+                            document.getElementById("services").scrollIntoView({ behavior: "smooth" })
+                        }
+                    >Explore Programs</button>
                 </div>
-            </div>
+
+            </motion.div>
         </section>
     );
 }

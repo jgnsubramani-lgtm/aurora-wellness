@@ -1,38 +1,64 @@
 import heroImage from "../assets/hero.jpg";
 import { motion } from "framer-motion";
 
-
 function About() {
-    return (
-        <section className="about">
-            <motion.div
-                className="about-container"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-            >
-                <div className="about-image">
-                    <img src={heroImage} alt="Aurora Wellness" />
-                </div>
+  const stats = [
+    { number: "8000+", label: "Students Community" },
+    { number: "Gold Medal", label: "National Yoga Champion" },
+    { number: "World Record", label: "Yoga Achievement" },
+    { number: "MSc", label: "Yoga Therapy" },
+  ];
 
-                <div className="about-text">
-                    <h2>About Aurora</h2>
-                    <p>
-                        Aurora is a space where wellness feels calm, achievable,
-                        and personal. We believe in gentle guidance over pressure,
-                        and progress that fits into real life.
-                    </p>
+  return (
+    <section className="about" id="about">
+      <div className="about-wrapper">
+        
+        <motion.div
+          className="about-image"
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <img src={heroImage} alt="Aurora Wellness Instructor" />
+        </motion.div>
 
-                    <p>
-                        Through therapeutic yoga, mindful movement, and holistic
-                        wellness practices, we support your journey toward balance,
-                        strength, and inner peace.
-                    </p>
-                </div>
-            </motion.div>
-        </section>
-    );
+        <motion.div
+          className="about-content"
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2>About Aurora Wellness</h2>
+
+          <p>
+            Aurora Wellness is dedicated to helping people achieve balance,
+            strength, and inner peace through yoga and mindful movement.
+            Our programs focus on therapeutic practices designed for
+            women, children, seniors, and individuals seeking holistic wellbeing.
+          </p>
+
+          <p>
+            With years of experience and a growing global community,
+            Aurora Wellness provides personalized guidance and
+            accessible yoga practices that fit into everyday life.
+          </p>
+
+          <div className="about-stats">
+            {stats.map((stat, index) => (
+              <div className="stat-card" key={index}>
+                <h3>{stat.number}</h3>
+                <p>{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+        </motion.div>
+
+      </div>
+    </section>
+  );
 }
 
 export default About;
