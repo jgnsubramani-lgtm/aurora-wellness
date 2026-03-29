@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap');
+
 /* ===== RESET ===== */
 * {
   margin: 0;
@@ -28,8 +30,6 @@ body {
   );
   color: #222;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap');
 
 body {
   font-family: 'Inter', sans-serif;
