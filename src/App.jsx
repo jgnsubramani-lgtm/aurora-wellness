@@ -8,6 +8,7 @@ import About from "./sections/About";
 import Services from "./sections/Services";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import Gallery from './sections/Gallery';
 
 
 
@@ -27,18 +28,32 @@ function App() {
       <Hero />
       <About />
       <Services />
+      <Gallery />
       <Testimonials />
       <Contact />
       <div className="footer-divider" />
       <Footer />
-      <a
-        href="https://wa.me/919566195284?text=Hi%20I%20am%20interested%20in%20Aurora%20Wellness"
-        className="floating-whatsapp"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        💬
-      </a>
+     <div className="floating-social-box">
+  <a
+    href="https://www.instagram.com/aurorawellness.in/"
+    className="floating-icon instagram-icon"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+  >
+    IG
+  </a>
+
+  <a
+    href="https://wa.me/919566195284?text=Hi%20I%20am%20interested%20in%20Aurora%20Wellness"
+    className="floating-icon whatsapp-icon"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+  >
+    WA
+  </a>
+</div>
     </>
   );
 }

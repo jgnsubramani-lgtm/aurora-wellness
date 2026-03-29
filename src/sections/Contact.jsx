@@ -53,9 +53,14 @@ export default function Contact() {
 
             <h4>✉ Email</h4>
             <p>aurorawellness.in@gmail.com</p>
-
             <h4>📷 Instagram</h4>
-            <p>@aurorawellness.in</p>
+            <a
+              href="https://www.instagram.com/aurorawellness.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @aurorawellness.in
+            </a>
           </div>
         </div>
       </motion.div>

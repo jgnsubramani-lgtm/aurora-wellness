@@ -7,10 +7,13 @@
 
 /* ===== ROOT VARIABLES ===== */
 :root {
-  --primary: #1f2d3d;
-  --accent: #c9a66b;
-  --background: #f7f2ec;
-  --text-light: #555;
+  --primary: #1a1a1a;        /* deep black/charcoal */
+  --secondary: #2b2b2b;      /* dark surface */
+  --accent: #c8a96a;         /* gold */
+  --accent-soft: #e5d3a1;    /* light gold */
+  --background: #f5f1ea;     /* soft cream */
+  --text-dark: #222;
+  --text-light: #777;
 }
 
 /* ===== BODY ===== */
@@ -24,6 +27,17 @@ body {
     #ffffff 100%
   );
   color: #222;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
 }
 
 /* Remove Vite default container restriction */
@@ -93,27 +107,68 @@ html {
 
 
 .hero {
-  position: relative;
-  height: 90vh;
+  height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
+  padding: 0 6%;
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
 }
 
+/* Background image darker */
 .hero-bg {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.65;
+  filter: contrast(1.1) brightness(0.9);
 }
+
+/* Gold luxury overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.9) 10%,
+    rgba(0,0,0,0.7) 40%,
+    rgba(0,0,0,0.4) 70%,
+    rgba(0,0,0,0.2) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  color: #fff;
+}
+
+.hero h1 {
+  color: #ffffff;
+}
+
+.hero p {
+  color: #d1d1d1;
+}
+
+
 
 .hero-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.6)
+  );
 }
 
 .hero-content {
@@ -160,21 +215,12 @@ html {
 }
 
 
-.hero {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-}
-
 .hero-bg {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.7);
 }
 
 .hero-light-overlay {
@@ -274,6 +320,18 @@ html {
   font-size: 14px;
   color: #555;
   line-height: 1.5;
+}
+
+.free-demo-badge {
+  background: rgba(200, 169, 106, 0.15);
+  color: #c8a96a;
+  border: 1px solid rgba(200, 169, 106, 0.4);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #c8a96a, #e5d3a1);
+  color: #1a1a1a;
+  font-weight: 600;
 }
 
 .primary-btn {

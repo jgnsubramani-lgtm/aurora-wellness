@@ -3,34 +3,38 @@ import { motion } from "framer-motion";
 function Services() {
   const services = [
     {
-      title: "Therapeutic Yoga",
-      desc: "Gentle therapeutic yoga designed to improve flexibility, reduce pain, and support overall physical and mental wellbeing."
+      title: "Yoga",
+      desc: "Build strength, flexibility, and inner balance through guided yoga sessions designed for all levels. Improve posture, reduce stress, and support your overall wellbeing."
+    },
+    {
+      title: "Aerial Yoga",
+      desc: "Experience a fun and energizing form of yoga using silk hammocks for support and movement. It helps improve flexibility, core strength, and body balance."
     },
     {
       title: "Dance Fitness",
-      desc: "High-energy dance workouts that help burn calories, relieve stress, and make fitness fun and engaging."
+      desc: "Enjoy high-energy workout sessions that combine dance and fitness in a fun way. Burn calories, boost stamina, and stay active with lively routines."
     },
     {
-      title: "Women Wellness",
-      desc: "Yoga practices supporting hormone balance, PCOS management, stress reduction, and emotional wellbeing."
+      title: "Kids Gymnastics",
+      desc: "Specially designed sessions for children to improve flexibility, coordination, balance, and confidence. A playful and active way to support healthy growth."
     },
     {
-      title: "Kids Yoga",
-      desc: "Fun and interactive yoga sessions that improve concentration, posture, confidence, and boost immunity."
+      title: "Meditation",
+      desc: "Calm your mind and improve focus with guided meditation practices. Perfect for reducing stress, enhancing clarity, and creating emotional balance."
     },
     {
-      title: "Senior Citizen Yoga",
-      desc: "Safe and gentle yoga focusing on joint mobility, balance improvement, and breathing practices."
+      title: "Sound Healing",
+      desc: "Relax deeply with soothing sound vibrations that help release stress and restore inner harmony. A peaceful healing experience for mind and body."
     },
     {
-      title: "Prenatal & Postnatal Yoga",
-      desc: "Specialized yoga sessions supporting pregnancy wellness, safe movement, and post-delivery recovery."
+      title: "Pranayama",
+      desc: "Learn powerful breathing techniques to improve lung capacity, energy flow, and mental calmness. A simple yet effective practice for daily wellness."
     }
   ];
 
   return (
     <section className="services" id="services">
-      <h2 className="services-title">Our Programs</h2>
+      <h2 className="services-title">Our Services</h2>
 
       <div className="services-grid">
         {services.map((service, index) => (
