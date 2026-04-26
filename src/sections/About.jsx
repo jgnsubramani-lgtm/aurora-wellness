@@ -1,4 +1,4 @@
-import heroImage from "../assets/hero.jpg";
+import heroVideo from "../assets/Auro_Video_new.mp4"
 import { motion } from "framer-motion";
 
 function About() {
@@ -12,15 +12,26 @@ function About() {
   return (
     <section className="about" id="about">
       <div className="about-wrapper">
-        
+
         <motion.div
-          className="about-image"
+          className="about-video"
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <img src={heroImage} alt="Aurora Wellness Instructor" />
+          <video
+            src={heroVideo}
+            autoPlay
+            className="about-video"
+            // controls
+            preload="auto"
+            loop
+            muted
+            playsInline
+            style={{ width: "590px", height: "523px", objectFit: "cover" }}
+
+          />
         </motion.div>
 
         <motion.div
