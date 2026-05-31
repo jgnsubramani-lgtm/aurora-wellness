@@ -29,7 +29,29 @@ function Navbar() {
       <div className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
         <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
         <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-        <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+        <div className="dropdown">
+          <a href="#services">
+            Wellness <span className="dropdown-arrow">▾</span>
+          </a>
+
+          <div className="dropdown-menu">
+            <a href="#yoga" onClick={() => setMenuOpen(false)}>
+              Yoga Therapy
+            </a>
+
+            <a href="#meditation" onClick={() => setMenuOpen(false)}>
+              Meditation
+            </a>
+
+            <a href="#services" onClick={() => setMenuOpen(false)}>
+              Wellness Programs
+            </a>
+
+            <a href="#consultation" onClick={() => setMenuOpen(false)}>
+              Consultation
+            </a>
+          </div>
+        </div>
         <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </div>
     </nav>

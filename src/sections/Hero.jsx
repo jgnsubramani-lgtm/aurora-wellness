@@ -1,12 +1,43 @@
 import heroImage from "../assets/hero.jpg";
+import heroVideo from "../assets/Auro_Video_new.mp4";
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
 
 function Hero() {
+  const [showVideo, setShowVideo] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowVideo(true);
+    }, 5000); // 5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleVideoEnd = () => {
+    setShowVideo(false);
+  };
+
   return (
     <section className="hero" id="home">
       <div className="hero-overlay"></div>
 
-      <img src={heroImage} alt="Aurora Wellness" className="hero-bg" />
+      {!showVideo ? (
+        <img src={heroImage} alt="Aurora Wellness" className="hero-bg" />
+      ) : (
+        <video
+          ref={videoRef}
+          src={heroVideo}
+          autoPlay
+          muted
+          playsInline
+          onEnded={handleVideoEnd}
+          className="hero-bg-video"
+          loop={false}
+        />
+      )}
 
       <motion.div
         className="hero-content"
@@ -14,23 +45,15 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="free-demo-badge">
+        {/* <div className="free-demo-badge">
           Complimentary First Session
-        </div>
+        </div> */}
 
         <h1>Find Your Balance with Aurora Wellness</h1>
 
         <p>
           Wellness sessions designed for individuals, groups, communities, and workplaces — available in studio and online.
         </p>
-
-        {/* <div className="hero-session-types">
-          <span>Studio Sessions</span>
-          <span>Online Group</span>
-          <span>One-on-One</span>
-          <span>Community</span>
-          <span>Corporate Wellness</span>
-        </div> */}
 
         <div className="hero-buttons">
           <a
@@ -39,17 +62,18 @@ function Hero() {
             rel="noopener noreferrer"
             className="primary-btn"
           >
-            Book Free Demo
+            BOOK A SESSION TODAY
           </a>
-
-          <button
+          {/* <button
             className="secondary-btn"
             onClick={() =>
-              document.getElementById("services").scrollIntoView({ behavior: "smooth" })
+              document
+                .getElementById("services")
+                .scrollIntoView({ behavior: "smooth" })
             }
           >
             Explore Services
-          </button>
+          </button> */}
         </div>
       </motion.div>
     </section>

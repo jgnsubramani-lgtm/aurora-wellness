@@ -272,6 +272,14 @@ section::after {
   gap: 28px;
 }
 
+.dropdown-menu a {
+  color: #222 !important;
+}
+
+.dropdown-menu a:hover {
+  color: #c8a96a !important;
+}
+
 .nav-links a {
   color: white;
   text-decoration: none;
