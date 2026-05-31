@@ -74,6 +74,7 @@
   border-radius: 30px;
   font-weight: 500;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .primary-btn:hover {
@@ -536,7 +537,7 @@
 .hero-bg,
 .hero-bg-video {
   position: absolute;
-  transform: scaleX(-1);
+  transform: translateY(0px) scaleX(-1);
   top: 0px;
 
   left: 0;
@@ -786,5 +787,75 @@
 
   .hero::after {
     height: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about-text p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-bg-video {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+@media (max-width: 768px) {
+  .hero-bg,
+  .hero-bg-video {
+   object-position: 40% center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-bg-video {
+    object-position: center 40%;
+    transform: translateY(-220px) scaleX(-1)
   }
 }
