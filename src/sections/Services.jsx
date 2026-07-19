@@ -6,16 +6,16 @@ function Services() {
       title: "Yoga",
       desc: "Build strength, flexibility, and inner balance through guided yoga sessions designed for all levels. Improve posture, reduce stress, and support your overall wellbeing."
     },
-    {
-      title: "Aerial Yoga",
-      desc: "Experience a fun and energizing form of yoga using silk hammocks for support and movement. It helps improve flexibility, core strength, and body balance."
-    },
+    // {
+    //   title: "Aerial Yoga",
+    //   desc: "Experience a fun and energizing form of yoga using silk hammocks for support and movement. It helps improve flexibility, core strength, and body balance."
+    // },
     {
       title: "Dance Fitness",
       desc: "Enjoy high-energy workout sessions that combine dance and fitness in a fun way. Burn calories, boost stamina, and stay active with lively routines."
     },
     {
-      title: "Kids Gymnastics",
+      title: "Kids Yoga",
       desc: "Specially designed sessions for children to improve flexibility, coordination, balance, and confidence. A playful and active way to support healthy growth."
     },
     {

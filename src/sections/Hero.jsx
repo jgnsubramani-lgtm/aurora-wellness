@@ -39,6 +39,56 @@ function Hero() {
         />
       )}
 
+    <div className="retreat-announcement">
+
+  <div className="retreat-left">
+
+    <span className="retreat-label">
+      🌴 NEXT SIGNATURE RETREAT
+    </span>
+
+    <h3>
+      Andaman Wellness Retreat 2026
+    </h3>
+
+    <p className="retreat-description">
+      Escape into 5 unforgettable days of yoga, meditation,
+      pristine beaches and island experiences.
+    </p>
+
+    <div className="retreat-features">
+
+      <span>🧘 Yoga</span>
+
+      <span>🧘 Meditation</span>
+
+      <span>🌊 Island Experience</span>
+
+    </div>
+
+    <span className="limited-seat">
+      ✨ Limited Seats Available
+    </span>
+
+  </div>
+
+  <div className="retreat-right">
+
+    <a
+            href="https://wa.me/919566195284?text=Hi%20I%20would%20like%20to%20book%20a%20free%20demo%20session"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-btn"
+          >
+      Learn More →
+    </a>
+
+  </div>
+
+</div>
+
+
+
       <motion.div
         className="hero-content"
         initial={{ opacity: 0, y: 40 }}
